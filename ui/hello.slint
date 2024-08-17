@@ -2,6 +2,8 @@ import { Button, VerticalBox } from "std-widgets.slint";
 
 export component AppWindow inherits Window {
     in-out property <int> counter: 42;
+    in-out property <int> decounter: 100;
+
     width: 800px;
     height: 400px;
 
@@ -9,6 +11,9 @@ export component AppWindow inherits Window {
     VerticalBox {
         Text {
             text: "Counter: \{root.counter}";
+        }
+        Text {
+            text: "DeCounter: \{root.decounter}";
         }
 
         Button {

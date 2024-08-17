@@ -8,6 +8,7 @@ fn main() -> Result<(), slint::PlatformError> {
         move || {
             let ui = ui_handle.unwrap();
             ui.set_counter(ui.get_counter() + 1);
+            ui.set_decounter(ui.get_decounter() - 1)
         }
     });
 
