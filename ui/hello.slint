@@ -8,18 +8,27 @@ export component AppWindow inherits Window {
     height: 400px;
 
     callback request-increase-value();
+    callback record_capture();
     VerticalBox {
-        Text {
-            text: "Counter: \{root.counter}";
+/*         Text {
+            text: "Record: \{root.counter}";
         }
         Text {
             text: "DeCounter: \{root.decounter}";
         }
+       
 
         Button {
             text: "Increase value";
             clicked => {
                 root.request-increase-value();
+            }
+        } */
+
+        Button {
+            text: "RECORD";
+            clicked => {
+                root.record_capture();
             }
         }
     }

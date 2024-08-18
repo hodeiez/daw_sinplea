@@ -1,3 +1,5 @@
+mod audio_core;
+
 slint::include_modules!();
 
 fn main() -> Result<(), slint::PlatformError> {
@@ -11,6 +13,11 @@ fn main() -> Result<(), slint::PlatformError> {
             ui.set_decounter(ui.get_decounter() - 1)
         }
     });
+
+    ui.on_record_capture({
+     move || {audio_core::start_capture("default");}
+    });
+        
 
     ui.run()
 }
